@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+    <link rel="stylesheet"
+        href="Js.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/themes/prism.min.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Testing</a></li>
+            <li><a href="#"> The Internet/Web </a></li>
+            <li><a href="#">Rest API</a></li>
+                       <li><a href="#">Node JS</a></li>
+                       <li><a href="#">SQL</a></li>
+                        <li><a href="#">TypeScript</a></li>
+        </ul>
+    </nav>
+    <h1> JavaScript</h1>
+                <!-- <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSS9KzLAEmCd3PUH1KEPRNIoDUMKmeyJ6ZnaQ&usqp=CAU" alt="javascript variable declarations" class="javascript-img" > -->
+                <h3> 1. Function Scope </h3>
+                <p>Function scope means that a variable declared within a function is only accessible within that function and any nested functions. Outside of the function, the variable is not visible or accessible.</p>
+                
+                    <h3>2. Block Scope</h3>
+                    <p>Variables declared using let and const inside a block (e.g., within an if statement or a loop) have a block scope. They are only accessible within that specific block and not outside of it. Block-scoped variables are discarded from memory once the block execution is finished.</p>
+            <p>It's important to note that let and const variables have block scope, which means they are more localized and less prone to unintended variable overwriting or leakage compared to var. When declaring variables, it is generally recommended to use let or const instead of var to avoid potential scope-related issues.
+            </p>
+            <div class="code-blocks">
+                <div class="code-block-container">
+                    <pre>
+                    <code class="language-javascript">
+function myFunction() {
+var x = 10; // x is function-scoped and can only be accessed within myFunction()
+console.log(x);
+     }
+        
+myFunction(); // Output: 10
+console.log(x); // Error: x is not defined (not accessible outside the function)
+                    </code>
+                    </pre>
+                </div>
+                <p class="code-caption">Code block demonstrating the usage of function-scoped variables with 'var'.</p>
+                <div class="code-block-container">
+                    <pre>
+                    <code class="language-javascript">
+if (true) {
+let blockLetVar = 5; 
+const blockConstVar = 7;
+console.log(blockLetVar);   // Accessible
+console.log(blockConstVar); // Accessible
+        }
+        
+console.log(blockLetVar);   // Error - blockLetVar is not accessible here
+console.log(blockConstVar); // Error - blockConstVar is not accessible here
+                    </code>
+                </pre>
+                </div>
+                <p class="code-caption">Code block demonstrating the scope-related errors when trying to access block scoped variables declared with let/const outside their block scope.</p>
+            </div>
+        </div>
+    
+      <!-- Include the Prism JavaScript file -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/prism.min.js"></script>
+
+<!-- Include additional Prism plugins for specific languages, if needed -->
+<script src="https://cdn.jsdelivr.net/npm/prismjs@1.28.0/components/prism-javascript.min.js"></script>
+
+<!-- Call the script to initialize Prism -->
+<script>
+    Prism.highlightAll();
+</script>     
+</body>
+</html>
